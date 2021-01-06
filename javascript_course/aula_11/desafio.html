@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>County: Foreign or Brazilian</title>
+  </head>
+  <body>
+    <h1>Verificar seu país</h1>
+    Escreva o seu país aqui: <input type="text" name="verificarpaís" id="verification">
+    <input type="button" value="Verificar" id="verificarbotao" onclick="verify()">
+    <div id="res"></div>
+    <div id="result">
+
+    </div>
+    <script>
+        function verify() {
+            var país = document.getElementById("verification") // Busca o elemento pelo id "verification"
+            var local = document.getElementById("result") // Busca o elemento pelo id "result"
+            var nacionalidade = document.getElementById("res") // Busca o elemento pelo id "res"
+            var res_país = (país.value) // pega o valor de $país
+
+            if (país != "Brasil") { // Se país não for igual a Brasil
+                nacionalidade.innerHTML = "Resultado: Você é estrangeiro!" // Você é estrangeiro
+                local.innerHTML = `Você está em ${res_país}` // Mostra o seu país
+            } else {
+                local.innerHTML = `Você está em ${res_país}` // Mostra o seu país
+                nacionalidade.innerHTML = "Resultado: Você é brasileiro!" // Você é brasileiro
+            }
+          }
+    </script>
+  </body>
+</html>

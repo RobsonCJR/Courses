@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <style>
+      body {
+        background: black;
+        color: white;
+        font: normal 18px Arial;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Estudando DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">
+      Clique Aqui
+    </div>
+    <script>
+      var corpo = window.document.body
+      var p1 = window.document.getElementsByTagName('p')[1]
+      var d = window.document.querySelector('div.msg')
+      d.style.background = 'blue'
+      // window.alert(p1.innerText)
+      // var d = window.document.getElementById('msg')
+      // d.style.background = 'yellow'
+      // d.style.color = 'black'
+      // // d.innerText = 'Estou aguardando...'
+      // window.document.getElementById('msg').innerText = 'Olá'
+    </script>
+  </body>
+</html>
+<!-- window.document.write('Está escrito assim: ' + p1.innerText)
+p1.style.color = 'blue'
+corpo.style.background = 'gray' -->
